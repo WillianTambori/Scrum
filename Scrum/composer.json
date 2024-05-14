@@ -1,0 +1,20 @@
+{
+    "name": "willian/scrum",
+    "description": "projeto de forum",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        },
+        "files": [
+            "config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "willianTambori",
+            "email": "msn.willian@gmail.com"
+        }
+    ],
+    "require": {}
+}
