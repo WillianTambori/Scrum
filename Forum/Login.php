@@ -52,6 +52,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Login">
         </div>
     </form>
-    <p>Ainda não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</a>.</p>
+    <p>Ainda não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</a>!</p>
 </body>
 </html>
