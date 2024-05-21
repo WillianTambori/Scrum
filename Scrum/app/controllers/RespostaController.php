@@ -4,7 +4,7 @@ namespace app\controllers;
 use app\models;
 use app\bd\conexaoBd;
 
-class UsuarioController{
+class RespostaController{
     private $pergunta;
     private $usuario;
     private $resposta;
@@ -15,17 +15,13 @@ class UsuarioController{
         $this->resposta = new models\RespostaModel($bd);
         $this->usuario = new models\UsuarioModel($bd);
         
-        
-
-        //$this->CadastroModelo = new CadastroModelo($banco);
-        
     }
     public function getAll()
     {
-        $usuario = $this->usuario->selectAll();
+        $usuario = $this->resposta->selectAll();
         require_once "app/views/helloWord.php";
-    }
 
+    }
     public function post($data)
     {
         
