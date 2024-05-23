@@ -125,8 +125,8 @@ form h2, p {
 
 footer {
     position: fixed;
-    bottom: 5px;
-    margin: 3em auto;
+    bottom: 0;
+    margin: 0.1em auto;
     width: 100%;
 }
 
