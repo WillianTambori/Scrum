@@ -1,3 +1,27 @@
+<?php
+session_start();
+include_once 'config.php';
+
+if(!isset($_SESSION['userId'])) {
+    header("Location: login.php");
+    exit;
+}
+
+// Consulta perguntas respondidas pelo usuário
+$userId = $_SESSION['userId'];
+$sql = "SELECT q.id, q.question_text, a.answer_text
+        FROM questions q
+        INNER JOIN answers a ON q.id = a.question_id
+        WHERE a.user_id = '$userId'";
+$result = $conn->query($sql);
+$answeredQuestions = [];
+
+if($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $answeredQuestions[] = $row;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,7 +47,23 @@
     <section class="content centraliza">
         <h2>Bem-vindo ao Fórum de Discussão!</h2>
         <p>Este é um fórum dedicado à discussão do nosso tema principal.</p>
-        <!-- Adicione mais conteúdo aqui conforme necessário -->
+        
+        
+        <?php if(empty($answeredQuestions)): ?>
+        <p>Você ainda não respondeu a nenhuma pergunta.</p>
+    <?php else: ?>
+        <h2>Perguntas respondidas por você</h2>
+        <ul>
+            <?php foreach($answeredQuestions as $question): ?>
+                <hr>
+                <li>
+                    <p><strong>Pergunta:</strong> <?php echo $question['question_text']; ?></p>
+                    <p><strong>Resposta:</strong> <?php echo $question['answer_text']; ?></p>
+                </li>
+                <hr>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
     </section>
 
     <?php
