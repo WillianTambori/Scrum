@@ -42,8 +42,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+<header>
         <h1>Fórum de Discussão</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Início</a></li>
+                <li><a href="discussion.php">Discussão</a></li>
+                <li><a href="profile.php">Perfil</a></li>
+                <li class="active"><a href="login.php">Login</a></li>
+                <li><a href="cadastrar.php">Cadastrar</a></li>
+                <li><a href="inc/logout.php">Logout</a></li>
+            </ul>
+        </nav>
     </header>
     
     <section class="content">

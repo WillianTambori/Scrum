@@ -16,11 +16,12 @@
                 <li class="active"><a href="profile.php">Perfil</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="cadastrar.php">Cadastrar</a></li>
+                <li><a href="inc/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
     
-    <section class="content">
+    <section class="content centraliza">
         <h2>Perfil do Usuário</h2>
         <!-- Aqui você pode exibir informações do perfil do usuário -->
     </section>

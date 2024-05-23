@@ -48,6 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="profile.php">Perfil</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li class="active"><a href="cadastrar.php">Cadastrar</a></li>
+                <li><a href="inc/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
