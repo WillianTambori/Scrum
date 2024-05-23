@@ -122,3 +122,14 @@ form h2, p {
     width: 150px;
     margin-bottom: 10px;
 }
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    margin: 3em auto;
+    width: 100%;
+}
+
+footer p{
+    text-align: center;
+}
