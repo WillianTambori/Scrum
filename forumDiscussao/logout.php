@@ -11,7 +11,7 @@
     <script>
         function startCountdown() {
             var countdownElement = document.getElementById('countdown');
-            var timeLeft = 10;
+            var timeLeft = 5;
 
             var countdownInterval = setInterval(function() {
                 if (timeLeft <= 0) {
@@ -40,7 +40,7 @@
     </section>
 
     <section class="content">
-        <p>Você será redirecionado para a página inicial em <span id="countdown">10</span> segundos.</p>
+        <p>Você será redirecionado para a página inicial em <span id="countdown">5</span> segundos.</p>
     </section>
 
     <?php
