@@ -16,6 +16,11 @@ class PerguntaController{
         $this->usuario = new models\UsuarioModel($bd);
         
     }
+    public function get($id){
+        $perguntas = $this->pergunta->select($id);
+        require_once "app/views/home.php";
+
+    }
     public function getAll()
     {
         $usuario = $this->pergunta->selectAll();

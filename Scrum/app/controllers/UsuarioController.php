@@ -23,11 +23,17 @@ class UsuarioController{
     public function getAll()
     {
         $usuario = $this->usuario->selectAll();
-        require_once "app/views/helloWord.php";
+        require_once "app/views/login.php";
     }
 
-    public function post($data)
+    public function post($data = null)
     {
+        if($data === null){
+            require_once "app/views/cadastrar.php";
+        }else{
+            $this->usuario->insert($data[0],$data[2],$data[3],$data[1]);
+            require_once "app/views/login.php";
+        }
         
        
     }
@@ -41,6 +47,19 @@ class UsuarioController{
     {
         
 
+    }
+    public function login($data){
+        $usuario = $this->usuario->select($data[0]);
+      if($usuario !== null){
+        if($data[1] === $usuario[0]['senha']){
+            require_once "app/views/cadastrar.php";   
+        }else{
+            require_once "app/views/login.php";
+        }
+        }else{
+            require_once "app/views/login.php";
+        }
+        
     }
 
     }

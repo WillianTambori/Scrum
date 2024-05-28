@@ -12,9 +12,10 @@ class UsuarioModel{
         
     }
    
-    public  function select($id){
+    public function select($id){
         
-        return $this->conexao->executaSQL("SELECT * FROM usuario WHERE id = $id ");
+        $res = $this->conexao->executaSQL("SELECT * FROM usuario WHERE nome = '$id'");
+        return count($res) > 0 ? $res: null;
     }
     public  function selectAll(){
     
