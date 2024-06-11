@@ -1,0 +1,17 @@
+Conectar Azure DevOps com o GitHub:
+
+Como responsável por fazer atualizações no GitHub e conectar o Azure DevOps a ele, é importante seguir algumas etapas específicas dentro do projeto desejado:
+
+1. Certifique-se de ser membro do grupo de segurança "Administradores do projeto" e ter as permissões necessárias para criar conexões com serviços externos no Azure DevOps, o que permitirá a integração com o GitHub.
+
+2. Faça login na sua conta do GitHub e adicione os repositórios que você deseja utilizar no Azure DevOps.
+
+3. Uma vez que a conexão entre o Azure DevOps e o GitHub esteja estabelecida, é importante garantir que as tarefas realizadas estejam devidamente interligadas. Para isso, siga este tutorial:
+
+   - Ao adicionar um arquivo no GitHub, dê a ele um nome que corresponda à tarefa relacionada. Por exemplo, se a tarefa estiver relacionada à criação de uma apresentação, nomeie o arquivo de acordo com a tarefa.
+   
+   - Além disso, ao adicionar o nome do arquivo, inclua o código da tarefa relacionada no formato "AB#número_da_tarefa", no commit quando for adicionar o arquivo. Por exemplo, se a tarefa estiver relacionada à tarefa número 18, o nome do arquivo pode ser "Apresentação AB#18".
+
+Esses passos garantirão que as atualizações feitas no GitHub estejam diretamente associadas às tarefas específicas no Azure DevOps, facilitando o acompanhamento do progresso do projeto e garantindo uma colaboração eficiente entre as duas plataformas.
+
+Para saber mais: https://learn.microsoft.com/pt-br/azure/devops/boards/github/connect-to-github?view=azure-devops
